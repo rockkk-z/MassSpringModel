@@ -34,24 +34,24 @@ $$
 
 - **显式欧拉**：完全使用当前时刻状态计算下一时刻。
 
-  $$
-  v_{t+1} = v_t + a_t \Delta t, \quad x_{t+1} = x_t + v_t \Delta t
-  $$
+$$
+v_{t+1} = v_t + a_t \Delta t, \quad x_{t+1} = x_t + v_t \Delta t
+$$
 
 
 - **半隐式欧拉**：先更新速度，再用新速度更新位置。
 
-  $$
-  v_{t+1} = v_t + a_t \Delta t, \quad x_{t+1} = x_t + v_{t+1} \Delta t
-  $$
+$$
+v_{t+1} = v_t + a_t \Delta t, \quad x_{t+1} = x_t + v_{t+1} \Delta t
+$$
 
 - **隐式欧拉**：使用未来状态计算加速度，形成自洽方程。
 
-  $$
-  v_{t+1} = v_t + a(x_{t+1}, v_{t+1}) \Delta t, \quad x_{t+1} = x_t + v_{t+1} \Delta t
-  $$
+$$
+v_{t+1} = v_t + a(x_{t+1}, v_{t+1}) \Delta t, \quad x_{t+1} = x_t + v_{t+1} \Delta t
+$$
 
-  本实验采用定点迭代法（Fixed-Point Iteration）近似求解：将当前状态作为初值，多次迭代更新 $x_{next}, v_{next}$ 直至收敛。
+本实验采用定点迭代法（Fixed-Point Iteration）近似求解：将当前状态作为初值，多次迭代更新 $x_{next}, v_{next}$ 直至收敛。
 
 ## 三、实验任务与实现
 
